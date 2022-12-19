@@ -1,19 +1,19 @@
 <?php
 
 use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\ORMException;
-use Doctrine\ORM\Tools\Setup;
+use Doctrine\ORM\Exception\ORMException;
+use Doctrine\ORM\ORMSetup;
 
 require "vendor/autoload.php";
 
-$config = Setup::createAnnotationMetadataConfiguration(["src/Entities"], true);
+$config = ORMSetup::createAttributeMetadataConfiguration(["src/Entities"], true);
 
 $connection = [
-    "dbname" => env("DB_DATABASE", "doctrine"),
-    "user" => env("DB_USERNAME", "root"),
-    "password" => env("DB_PASSWORD", ""),
-    "host" => env("DB_HOST", "localhost"),
-    "driver" => "pdo_" . env("DB_CONNECTION", "mysql")
+    "dbname" => "packages-test",
+    "user" => "root",
+    "password" => "",
+    "host" => "localhost",
+    "driver" => "pdo_mysql"
 ];
 
 try {
