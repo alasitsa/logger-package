@@ -1,10 +1,7 @@
 <?php
 
-
 namespace Logger;
 
-
-use DateTime;
 use Logger\Entities\Log;
 use Logger\Services\ILogsService;
 use Psr\Log\AbstractLogger;
@@ -24,7 +21,7 @@ class Logger extends AbstractLogger implements LoggerInterface
         $log = new Log();
         $log->setLevel($level);
         $log->setMessage($message);
-        $log->setCreatedAt(new DateTime());
+        $log->setCreatedAt(new LoggerDateTime());
         $this->service->add($log);
     }
 }

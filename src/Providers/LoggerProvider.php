@@ -5,6 +5,7 @@ namespace Logger\Providers;
 
 use Logger\Logger;
 use Logger\Services\DBLogsService;
+use Logger\Services\FileLogsService;
 use Logger\Services\ILogsService;
 
 class LoggerProvider
@@ -14,7 +15,8 @@ class LoggerProvider
     ];
 
     private static array $providers = [
-        DBLogsService::class => EntityManagerProvider::class
+        DBLogsService::class => EntityManagerProvider::class,
+        FileLogsService::class => LogFileProvider::class
     ];
 
     public static function provide(): Logger

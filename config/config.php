@@ -2,14 +2,16 @@
 
 return [
     'doctrine_connection' => [
-        "dbname" => "packages-test",
-        "user" => "root",
-        "password" => "",
-        "host" => "localhost",
-        "driver" => "pdo_mysql"
+        "dbname" => env("DB_DATABASE", "laravel"),
+        "user" => env("DB_USERNAME", "root"),
+        "password" => env("DB_PASSWORD", ""),
+        "host" => env("DB_HOST", "localhost"),
+        "port" => env("DB_PORT", "3306"),
+        "driver" => env("DB_DRIVER", "pdo_mysql")
     ],
     'doctrine_config' => [
-        "path" => "src/Entities",
-        "isDev" => true
-    ]
+        "path" => env("ENTITIES_PATH", "src/Entities"),
+        "isDev" => env("DEV_MODE", "true") == "true"
+    ],
+    'log_file' => __DIR__ . env("LOG_FILE", '/logs1.csv')
 ];
