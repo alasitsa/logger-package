@@ -11,3 +11,7 @@ symfony/cache ^5.4
 doctrine/doctrine-bundle ^2.7
 
 ***
+
+usage:
+
+LoggerProvider::provide()
