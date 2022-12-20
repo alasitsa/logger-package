@@ -2,7 +2,7 @@
   "name": "alasitsa/logger",
   "description": "description",
   "minimum-stability": "stable",
-  "license": "proprietary",
+  "license": "MIT",
   "authors": [
     {
       "name": "alasitsa",
@@ -17,6 +17,6 @@
     "doctrine/doctrine-bundle": "^2.7"
   },
   "autoload": {
-    "psr-0": {"": "src/"}
+    "psr-4": {"": "src/"}
   }
 }

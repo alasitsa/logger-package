@@ -19,6 +19,9 @@ class LoggerProvider
         FileLogsService::class => LogFileProvider::class
     ];
 
+    /**
+     * @return Logger
+     */
     public static function provide(): Logger
     {
         $service_class = self::$services[ILogsService::class];
