@@ -14,4 +14,4 @@ doctrine/doctrine-bundle ^2.7
 
 usage:
 
-LoggerProvider::provide()
+Logger\Providers\LoggerProvider::provide()
