@@ -3,6 +3,7 @@
 
 namespace Logger\Entities;
 
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity]
@@ -18,7 +19,7 @@ class Log
     #[ORM\Column(type: 'string')]
     private string $message;
     #[ORM\Column(type: 'datetime')]
-    private string $created_at;
+    private DateTime $created_at;
 
     /**
      * @return int
@@ -69,17 +70,17 @@ class Log
     }
 
     /**
-     * @return string
+     * @return DateTime
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt(): DateTime
     {
         return $this->created_at;
     }
 
     /**
-     * @param string $created_at
+     * @param DateTime $created_at
      */
-    public function setCreatedAt(string $created_at): void
+    public function setCreatedAt(DateTime $created_at): void
     {
         $this->created_at = $created_at;
     }
