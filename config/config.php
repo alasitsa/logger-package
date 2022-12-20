@@ -13,5 +13,5 @@ return [
         "path" => env("ENTITIES_PATH", "src/Entities"),
         "isDev" => env("DEV_MODE", "true") == "true"
     ],
-    'log_file' => env("LOG_FILE", '/logs1.csv')
+    'log_file' => $_SERVER["DOCUMENT_ROOT"] . "/../" . env("LOG_FILE", '/logs1.csv')
 ];

@@ -11,6 +11,7 @@ class LogFileProvider
      */
     public static function provide(): string
     {
-        return (file_exists(CONFIG_FILE) ? CONFIG_FILE : LOCAL_CONFIG_FILE)["log_file"];
+        require(__DIR__ . "/../../config/constants.php");
+        return (require file_exists(CONFIG_FILE) ? CONFIG_FILE : LOCAL_CONFIG_FILE)["log_file"];
     }
 }

@@ -11,7 +11,7 @@ use Logger\Services\ILogsService;
 class LoggerProvider
 {
     private static array $services = [
-        ILogsService::class => FileLogsService::class
+        ILogsService::class => DBLogsService::class
     ];
 
     private static array $providers = [
