@@ -11,10 +11,10 @@
   ],
   "require": {
     "psr/log": "^1.1",
-    "doctrine/orm": "^2.11.0",
+    "doctrine/orm": "2.13.4",
     "doctrine/dbal": "^3.2",
-    "symfony/yaml": "^5.4",
-    "symfony/cache": "^5.4"
+    "symfony/cache": "^5.4",
+    "doctrine/doctrine-bundle": "^2.7"
   },
   "autoload": {
     "psr-0": {"": "src/"}
