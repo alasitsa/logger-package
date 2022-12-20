@@ -8,7 +8,22 @@ use Logger\Entities\Log;
 
 interface ILogsService
 {
+    /**
+     * @return array
+     */
     public function getAll(): array;
+
+    /**
+     * @param int $id
+     *
+     * @return Log
+     */
     public function get(int $id): Log;
-    public function add(Log $log);
+
+    /**
+     * @param Log $log
+     *
+     * @return void
+     */
+    public function add(Log $log): void;
 }
