@@ -17,7 +17,7 @@ class EntityManagerProvider
      */
     public static function provide(): EntityManager
     {
-        $config = require(__DIR__ . '/../../config/config.php');
+        $config = require(file_exists(CONFIG_FILE) ? CONFIG_FILE : LOCAL_CONFIG_FILE);
         $orm_setup = ORMSetup::createAttributeMetadataConfiguration([$config['doctrine_config']["path"]], $config['doctrine_config']["isDev"]);
         return EntityManager::create($config['doctrine_connection'], $orm_setup);
     }
